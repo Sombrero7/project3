@@ -494,6 +494,42 @@ states_df['churn'] = states_df['churn'] * 100
 ```
 
 ```python
+fig = px.choropleth(states_df,  # Input Pandas DataFrame
+                    locations='state',  # DataFrame column with locations
+                    color="value_count",  # DataFrame column with color values
+                    hover_name="state", # DataFrame column hover info
+                    locationmode = 'USA-states', # Set to plot as US States
+                    labels={'value_count':'Number of Clients'},
+                    color_continuous_scale=px.colors.sequential.Blues) 
+fig.update_layout(
+    title_text = 'State Rankings By Customer Count', # Create a Title
+    geo_scope='usa',  # Plot only the USA instead of globe
+)
+fig.show()
+```
+
+![png](images/plot1)
+
+```python
+fig = px.choropleth(states_df,  # Input Pandas DataFrame
+                    locations='state',  # DataFrame column with locations
+                    color="churn",  # DataFrame column with color values
+                    hover_name="state", # DataFrame column hover info
+                    locationmode = 'USA-states', # Set to plot as US States
+                    labels={'churn':'Churn Rate (%)'},
+                    color_continuous_scale=px.colors.sequential.Oranges) 
+fig.update_layout(
+    title_text = 'State Rankings by Churn Rate', # Create a Title
+    geo_scope='usa',  # Plot only the USA instead of globe
+)
+fig.show()
+```
+
+![png](images/plot2)
+
+
+
+```python
 gb = df.groupby(['state'])['churn'].mean() * 100
 gb.sort_values().plot(kind='bar', figsize=(12,12));
 plt.title('Churn Rate By State', fontsize=14);
