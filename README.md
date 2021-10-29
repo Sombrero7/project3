@@ -1374,7 +1374,7 @@ plt.title('Test');
 ## Evaluation
 ---
 
-We evaluate our models based on their abilities to maximize the number of identified churning customers while minimizing the misidentified non-churning customers. Again, the F-4 score comes in handy because it enables us to quadruple weight recall as to incentivize our model to treat the identification of churning customers with higher priority than hedging against the misidentification of non-churning customers. This is because mitigating a single unit of churn has a higher return in revenue than does the loss associated with a single unit of non-churn, we estimate in the around the order of 4 times.  
+We evaluate our models based on their abilities to maximize the number of identified churning customers while minimizing the misidentified non-churning customers. Again, the F-4 score comes in handy because it enables us to quadruple weight recall as to incentivize our model to treat the identification of churning customers with higher priority than hedging against the misidentification of non-churning customers. This is because mitigating a single unit of churn has a higher return in revenue than does the loss associated with a single unit of non-churn, we estimate to be around the order of 4 times. 
 
 Additional considerations include model complexity/interpretability and predictive time consumption.
 
@@ -1432,7 +1432,7 @@ plt.show()
 ![png](images/output_86_0.png)
 
 
-Based soley on our metrics, we would expect that XGBoost would do the best job in the field. However, Random Forest and kNN also perform well. We eliminate kNN because of its lack of interpretability. Between Random Forest and XGB, the better model would be decided based on retnetion campaign metrics - so we cannot say for certain which would be better for SyriaTel until be know more about their client base. Either will perform to an extent to give SyriaTel an edge over its competition, and will lead to an increase in revenue overall for SyriaTel. 
+Based solely on our metrics, we would expect that XGBoost would do the best job in the field. However, Random Forest and kNN also perform well. We eliminate kNN because of its lack of interpretability. Between Random Forest and XGB, the better model would be decided based on retention campaign metrics - so we cannot say for certain which would be better for SyriaTel until be know more about their client base. Either will perform to an extent to give SyriaTel an edge over its competition, and will lead to an increase in revenue overall for SyriaTel. 
 
 ## Conclusion
 ---
