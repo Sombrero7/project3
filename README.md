@@ -508,7 +508,7 @@ fig.update_layout(
 fig.show()
 ```
 
-![png](images/plot1)
+![png](images/plot1.png)
 
 ```python
 fig = px.choropleth(states_df,  # Input Pandas DataFrame
@@ -525,7 +525,7 @@ fig.update_layout(
 fig.show()
 ```
 
-![png](images/plot2)
+![png](images/plot2.png)
 
 
 
